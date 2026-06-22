@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Core infrastructure stack for Salesforce Calendar Sync'
+
+Parameters:
+  Environment:
+    Type: String
+    Default: prod
+    AllowedValues: [prod]
+    Description: Environment name
+
+  DynamoDBReadCapacity:
+    Type: Number
+    Default: 5
+    Description: Read capacity units for DynamoDB table
+
+  DynamoDBWriteCapacity:
+    Type: Number
+    Default: 5
+    Description: Write capacity units for DynamoDB table
+
+Resources:
+  # DynamoDB Table
+  CalendarEventsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub ${Environment}-calendar-events
+      BillingMode: PROVISIONED
+      ProvisionedThroughput:
+        ReadCapacityUnits: !Ref DynamoDBReadCapacity
+        WriteCapacityUnits: !Ref DynamoDBWriteCapacity
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+        - AttributeName: sk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: false
+      SSESpecification:
+        SSEEnabled: true
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Service
+          Value: CalendarSync
+        - Key: Component
+          Value: DynamoDB
+
+Outputs:
+  TableName:
+    Description: Name of the DynamoDB table
+    Value: !Ref CalendarEventsTable
+    Export:
+      Name: !Sub ${Environment}-CalendarEventsTableName
+
+  TableArn:
+    Description: ARN of the DynamoDB table
+    Value: !GetAtt CalendarEventsTable.Arn
+    Export:
+      Name: !Sub ${Environment}-CalendarEventsTableArn 

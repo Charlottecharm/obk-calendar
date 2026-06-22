@@ -1,0 +1,422 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Lambda and API Gateway stack for Salesforce Calendar Sync'
+
+Parameters:
+  Environment:
+    Type: String
+    Default: prod
+    AllowedValues: [prod]
+    Description: Environment name
+
+  SalesforceSecretName:
+    Type: String
+    Description: Name of the secret in Secrets Manager containing Salesforce credentials
+
+Resources:
+  # API Gateway
+  CalendarAPI:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: !Sub ${Environment}-calendar-api
+      Description: API for calendar events
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Service
+          Value: CalendarSync
+        - Key: Component
+          Value: API
+
+  # API Gateway Resources
+  EventsResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref CalendarAPI
+      ParentId: !GetAtt CalendarAPI.RootResourceId
+      PathPart: events
+
+  SyncResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref CalendarAPI
+      ParentId: !GetAtt CalendarAPI.RootResourceId
+      PathPart: sync
+
+  # Single Lambda Function for both sync operations
+  CalendarSyncLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub ${Environment}-calendar-sync
+      Handler: index.handler
+      Role: 
+        Fn::ImportValue: !Sub ${Environment}-LambdaExecutionRoleArn
+      Runtime: nodejs18.x
+      Timeout: 300
+      MemorySize: 1024
+      ReservedConcurrentExecutions: 1
+      Environment:
+        Variables:
+          TABLE_NAME: 
+            Fn::ImportValue: !Sub ${Environment}-CalendarEventsTableName
+          SECRET_NAME: !Ref SalesforceSecretName
+          ENVIRONMENT: !Ref Environment
+      Code:
+        ZipFile: |
+          const AWS = require('aws-sdk');
+          const jsforce = require('jsforce');
+          const moment = require('moment-timezone');
+          
+          const dynamoDB = new AWS.DynamoDB.DocumentClient();
+          const secretsManager = new AWS.SecretsManager();
+          
+          async function getSalesforceCredentials() {
+            const secret = await secretsManager.getSecretValue({
+              SecretId: process.env.SECRET_NAME
+            }).promise();
+            return JSON.parse(secret.SecretString);
+          }
+          
+          async function initializeSalesforce() {
+            const credentials = await getSalesforceCredentials();
+            const conn = new jsforce.Connection({
+              loginUrl: credentials.loginUrl
+            });
+            
+            await conn.login(credentials.username, credentials.password);
+            return conn;
+          }
+          
+          async function fetchSalesforceData(startDate, endDate) {
+            const conn = await initializeSalesforce();
+            
+            // Format dates for SOQL
+            const formatDateForSOQL = (date) => moment(date).format('YYYY-MM-DDTHH:mm:ss.SSSZ');
+            
+            // Query for opportunities
+            const opportunityQuery = await conn.query(`
+              SELECT Id, Name, CloseDate, Type, Event_Start_Date_Time__c, Event_End_Date_Time__c 
+              FROM Opportunity 
+              WHERE RecordTypeId='0129q0000004JvEAAU'
+              AND Event_Start_Date_Time__c >= ${formatDateForSOQL(startDate)}
+              AND Event_End_Date_Time__c <= ${formatDateForSOQL(endDate)}
+            `);
+            
+            // Query for timeslots
+            const timeslotQuery = await conn.query(`
+              SELECT Id, Name, goldenapp__Start__c, goldenapp__End__c 
+              FROM goldenapp__Volunteer_Opportunity_Timeslot__c
+              WHERE goldenapp__Start__c >= ${formatDateForSOQL(startDate)}
+              AND goldenapp__End__c <= ${formatDateForSOQL(endDate)}
+            `);
+            
+            return {
+              opportunities: opportunityQuery.records,
+              timeslots: timeslotQuery.records
+            };
+          }
+          
+          async function storeInDynamoDB(data) {
+            const batchWrites = [];
+            
+            // Process opportunities
+            for (const opp of data.opportunities) {
+              batchWrites.push({
+                PutRequest: {
+                  Item: {
+                    pk: `EVENT#${opp.Id}`,
+                    sk: `METADATA#${moment(opp.Event_Start_Date_Time__c).format('YYYY-MM-DD')}`,
+                    eventId: opp.Id,
+                    name: opp.Name,
+                    startTime: opp.Event_Start_Date_Time__c,
+                    endTime: opp.Event_End_Date_Time__c,
+                    type: opp.Type,
+                    lastSynced: new Date().toISOString(),
+                    source: 'SALESFORCE',
+                    data: opp
+                  }
+                }
+              });
+            }
+            
+            // Process timeslots
+            for (const slot of data.timeslots) {
+              batchWrites.push({
+                PutRequest: {
+                  Item: {
+                    pk: `TIMESLOT#${slot.Id}`,
+                    sk: `METADATA#${moment(slot.goldenapp__Start__c).format('YYYY-MM-DD')}`,
+                    eventId: slot.Id,
+                    name: slot.Name,
+                    startTime: slot.goldenapp__Start__c,
+                    endTime: slot.goldenapp__End__c,
+                    type: 'volunteer',
+                    lastSynced: new Date().toISOString(),
+                    source: 'SALESFORCE',
+                    data: slot
+                  }
+                }
+              });
+            }
+            
+            // Split into chunks of 25 (DynamoDB batch write limit)
+            const chunks = [];
+            for (let i = 0; i < batchWrites.length; i += 25) {
+              chunks.push(batchWrites.slice(i, i + 25));
+            }
+            
+            // Execute batch writes
+            for (const chunk of chunks) {
+              await dynamoDB.batchWrite({
+                RequestItems: {
+                  [process.env.TABLE_NAME]: chunk
+                }
+              }).promise();
+            }
+          }
+          
+          async function getEventsFromDynamoDB(startDate, endDate) {
+            const startDateStr = moment(startDate).format('YYYY-MM-DD');
+            const endDateStr = moment(endDate).format('YYYY-MM-DD');
+            
+            const params = {
+              TableName: process.env.TABLE_NAME,
+              FilterExpression: 'sk BETWEEN :start AND :end',
+              ExpressionAttributeValues: {
+                ':start': `METADATA#${startDateStr}`,
+                ':end': `METADATA#${endDateStr}`
+              }
+            };
+            
+            const result = await dynamoDB.scan(params).promise();
+            
+            // Transform data to match the format expected by the frontend
+            const events = result.Items.map(item => ({
+              title: item.name,
+              allDay: false,
+              start: item.startTime,
+              end: item.endTime,
+              type: item.type
+            }));
+            
+            return events;
+          }
+          
+          exports.handler = async (event) => {
+            try {
+              // Check if this is a sync request or a data fetch request
+              if (event.httpMethod === 'POST') {
+                // Sync operation
+                const startDate = moment().subtract(15, 'days').toDate();
+                const endDate = moment().add(15, 'days').toDate();
+                
+                const data = await fetchSalesforceData(startDate, endDate);
+                await storeInDynamoDB(data);
+                
+                return {
+                  statusCode: 200,
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                  },
+                  body: JSON.stringify({ message: 'Sync completed successfully' })
+                };
+              } else {
+                // Data fetch operation
+                const startDate = event.queryStringParameters?.start || moment().subtract(15, 'days').toISOString();
+                const endDate = event.queryStringParameters?.end || moment().add(15, 'days').toISOString();
+                
+                const events = await getEventsFromDynamoDB(startDate, endDate);
+                
+                return {
+                  statusCode: 200,
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                  },
+                  body: JSON.stringify({ events })
+                };
+              }
+            } catch (error) {
+              console.error('Error:', error);
+              return {
+                statusCode: 500,
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Access-Control-Allow-Origin': '*'
+                },
+                body: JSON.stringify({ 
+                  error: 'Internal Server Error',
+                  message: error.message 
+                })
+              };
+            }
+          };
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Service
+          Value: CalendarSync
+        - Key: Component
+          Value: Lambda
+
+  # API Gateway Integration
+  EventsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CalendarAPI
+      ResourceId: !Ref EventsResource
+      HttpMethod: GET
+      AuthorizationType: NONE
+      ApiKeyRequired: true
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CalendarSyncLambda.Arn}/invocations
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: true
+        - StatusCode: 500
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: true
+
+  SyncMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CalendarAPI
+      ResourceId: !Ref SyncResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      ApiKeyRequired: true
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CalendarSyncLambda.Arn}/invocations
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: true
+        - StatusCode: 500
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: true
+
+  # Enable CORS
+  EventsMethodOptions:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CalendarAPI
+      ResourceId: !Ref EventsResource
+      HttpMethod: OPTIONS
+      AuthorizationType: NONE
+      Integration:
+        Type: MOCK
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Methods: "'GET,OPTIONS'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        RequestTemplates:
+          application/json: '{"statusCode": 200}'
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Headers: true
+            method.response.header.Access-Control-Allow-Methods: true
+            method.response.header.Access-Control-Allow-Origin: true
+
+  SyncMethodOptions:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CalendarAPI
+      ResourceId: !Ref SyncResource
+      HttpMethod: OPTIONS
+      AuthorizationType: NONE
+      Integration:
+        Type: MOCK
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Methods: "'POST,OPTIONS'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        RequestTemplates:
+          application/json: '{"statusCode": 200}'
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Headers: true
+            method.response.header.Access-Control-Allow-Methods: true
+            method.response.header.Access-Control-Allow-Origin: true
+
+  CalendarAPIDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn: 
+      - EventsMethod
+      - SyncMethod
+      - EventsMethodOptions
+      - SyncMethodOptions
+    Properties:
+      RestApiId: !Ref CalendarAPI
+
+  CalendarAPIStage:
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      RestApiId: !Ref CalendarAPI
+      DeploymentId: !Ref CalendarAPIDeployment
+      StageName: !Ref Environment
+      MethodSettings:
+        - ResourcePath: "/*"
+          HttpMethod: "*"
+          ThrottlingRateLimit: 20
+          ThrottlingBurstLimit: 40
+
+  # Lambda Permissions for API Gateway
+  EventsLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref CalendarSyncLambda
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${CalendarAPI}/*/*/*
+
+  SyncLambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref CalendarSyncLambda
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${CalendarAPI}/*/*/*
+
+  # EventBridge Rule for Daily Sync
+  DailySyncRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: !Sub ${Environment}-daily-sync-rule
+      Description: Triggers daily sync of Salesforce data
+      ScheduleExpression: rate(1 day)
+      State: ENABLED
+      Targets:
+        - Arn: !GetAtt CalendarSyncLambda.Arn
+          Id: CalendarSyncLambdaTarget
+
+  DailySyncPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref CalendarSyncLambda
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt DailySyncRule.Arn
+
+Outputs:
+  ApiEndpoint:
+    Description: API Gateway endpoint URL
+    Value: !Sub https://${CalendarAPI}.execute-api.${AWS::Region}.amazonaws.com/${Environment}
+    Export:
+      Name: !Sub ${Environment}-ApiEndpoint
+
+  CalendarSyncLambdaArn:
+    Description: ARN of the Calendar Sync Lambda function
+    Value: !GetAtt CalendarSyncLambda.Arn
+    Export:
+      Name: !Sub ${Environment}-CalendarSyncLambdaArn 

@@ -1,0 +1,1239 @@
+{
+  "prod-calendar-events": [
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-LABOUR-DAY-2025"
+          },
+          "sk": {
+            "S": "METADATA#2025-10-06"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/labour-day-2025"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2025-10-06"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2025-10-07T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2025-10-06T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-LABOUR-DAY-2025"
+              },
+              "Name": {
+                "S": "Labour Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2025-10-07T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-LABOUR-DAY-2025"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Labour Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2025-10-06T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-CHRISTMAS-DAY-2025"
+          },
+          "sk": {
+            "S": "METADATA#2025-12-25"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/christmas-day-2025"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2025-12-25"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2025-12-26T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2025-12-25T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-CHRISTMAS-DAY-2025"
+              },
+              "Name": {
+                "S": "Christmas Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2025-12-26T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-CHRISTMAS-DAY-2025"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Christmas Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2025-12-25T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-BOXING-DAY-2025"
+          },
+          "sk": {
+            "S": "METADATA#2025-12-26"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/boxing-day-2025"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2025-12-26"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2025-12-27T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2025-12-26T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-BOXING-DAY-2025"
+              },
+              "Name": {
+                "S": "Boxing Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2025-12-27T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-BOXING-DAY-2025"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Boxing Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2025-12-26T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-NEW-YEARS-DAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-01-01"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/new-years-day-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-01-01"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-01-02T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-01-01T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-NEW-YEARS-DAY-2026"
+              },
+              "Name": {
+                "S": "New Year's Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-01-02T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-NEW-YEARS-DAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "New Year's Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-01-01T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-AUSTRALIA-DAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-01-26"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/australia-day-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-01-26"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-01-27T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-01-26T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-AUSTRALIA-DAY-2026"
+              },
+              "Name": {
+                "S": "Australia Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-01-27T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-AUSTRALIA-DAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Australia Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-01-26T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-GOOD-FRIDAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-04-03"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/good-friday-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-04-03"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-04-04T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-04-03T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-GOOD-FRIDAY-2026"
+              },
+              "Name": {
+                "S": "Good Friday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-04-04T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-GOOD-FRIDAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Good Friday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-04-03T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-EASTER-SATURDAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-04-04"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/easter-saturday-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-04-04"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-04-05T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-04-04T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-EASTER-SATURDAY-2026"
+              },
+              "Name": {
+                "S": "Easter Saturday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-04-05T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-EASTER-SATURDAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Easter Saturday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-04-04T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-EASTER-MONDAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-04-06"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/easter-monday-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-04-06"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-04-07T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-04-06T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-EASTER-MONDAY-2026"
+              },
+              "Name": {
+                "S": "Easter Monday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-04-07T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-EASTER-MONDAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Easter Monday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-04-06T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-ANZAC-DAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-04-25"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/anzac-day-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-04-25"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-04-26T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-04-25T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-ANZAC-DAY-2026"
+              },
+              "Name": {
+                "S": "Anzac Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-04-26T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-ANZAC-DAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Anzac Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-04-25T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-KINGS-BIRTHDAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-06-08"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/kings-birthday-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-06-08"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-06-09T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-06-08T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-KINGS-BIRTHDAY-2026"
+              },
+              "Name": {
+                "S": "King's Birthday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-06-09T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-KINGS-BIRTHDAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "King's Birthday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-06-08T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-LABOUR-DAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-10-05"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/labour-day-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-10-05"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-10-06T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-10-05T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-LABOUR-DAY-2026"
+              },
+              "Name": {
+                "S": "Labour Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-10-06T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-LABOUR-DAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Labour Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-10-05T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-CHRISTMAS-DAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-12-25"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/christmas-day-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-12-25"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-12-26T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-12-25T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-CHRISTMAS-DAY-2026"
+              },
+              "Name": {
+                "S": "Christmas Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-12-26T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-CHRISTMAS-DAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Christmas Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-12-25T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-BOXING-DAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-12-26"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/boxing-day-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-12-26"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-12-27T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-12-26T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-BOXING-DAY-2026"
+              },
+              "Name": {
+                "S": "Boxing Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-12-27T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-BOXING-DAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Boxing Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-12-26T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-ADDITIONAL-BOXING-DAY-2026"
+          },
+          "sk": {
+            "S": "METADATA#2026-12-28"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/additional-boxing-day-2026"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2026-12-28"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2026-12-29T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2026-12-28T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-ADDITIONAL-BOXING-DAY-2026"
+              },
+              "Name": {
+                "S": "Additional Boxing Day Holiday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2026-12-29T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-ADDITIONAL-BOXING-DAY-2026"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Additional Boxing Day Holiday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2026-12-28T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-NEW-YEARS-DAY-2027"
+          },
+          "sk": {
+            "S": "METADATA#2027-01-01"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/new-years-day-2027"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2027-01-01"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2027-01-02T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2027-01-01T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-NEW-YEARS-DAY-2027"
+              },
+              "Name": {
+                "S": "New Year's Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2027-01-02T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-NEW-YEARS-DAY-2027"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "New Year's Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2027-01-01T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-AUSTRALIA-DAY-2027"
+          },
+          "sk": {
+            "S": "METADATA#2027-01-26"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/australia-day-2027"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2027-01-26"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2027-01-27T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2027-01-26T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-AUSTRALIA-DAY-2027"
+              },
+              "Name": {
+                "S": "Australia Day - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2027-01-27T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-AUSTRALIA-DAY-2027"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Australia Day - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2027-01-26T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-GOOD-FRIDAY-2027"
+          },
+          "sk": {
+            "S": "METADATA#2027-03-26"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/good-friday-2027"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2027-03-26"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2027-03-27T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2027-03-26T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-GOOD-FRIDAY-2027"
+              },
+              "Name": {
+                "S": "Good Friday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2027-03-27T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-GOOD-FRIDAY-2027"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Good Friday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2027-03-26T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-EASTER-SATURDAY-2027"
+          },
+          "sk": {
+            "S": "METADATA#2027-03-27"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/easter-saturday-2027"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2027-03-27"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2027-03-28T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2027-03-27T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-EASTER-SATURDAY-2027"
+              },
+              "Name": {
+                "S": "Easter Saturday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2027-03-28T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-EASTER-SATURDAY-2027"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Easter Saturday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2027-03-27T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "pk": {
+            "S": "EVENT#NSW-EASTER-MONDAY-2027"
+          },
+          "sk": {
+            "S": "METADATA#2027-03-29"
+          },
+          "data": {
+            "M": {
+              "attributes": {
+                "M": {
+                  "type": {
+                    "S": "NSW Holiday"
+                  },
+                  "url": {
+                    "S": "/nsw-holidays/easter-monday-2027"
+                  }
+                }
+              },
+              "CloseDate": {
+                "S": "2027-03-29"
+              },
+              "Event_End_Date_Time__c": {
+                "S": "2027-03-30T08:00:00.000+0000"
+              },
+              "Event_Start_Date_Time__c": {
+                "S": "2027-03-29T08:00:00.000+0000"
+              },
+              "Id": {
+                "S": "NSW-EASTER-MONDAY-2027"
+              },
+              "Name": {
+                "S": "Easter Monday - Kitchen Closed (NSW Public Holiday)"
+              },
+              "Type": {
+                "S": "NSW Holiday"
+              }
+            }
+          },
+          "endTime": {
+            "S": "2027-03-30T08:00:00.000+0000"
+          },
+          "eventId": {
+            "S": "NSW-EASTER-MONDAY-2027"
+          },
+          "lastSynced": {
+            "S": "2025-08-22T12:00:00.000Z"
+          },
+          "name": {
+            "S": "Easter Monday - Kitchen Closed (NSW Public Holiday)"
+          },
+          "source": {
+            "S": "NSW_HOLIDAYS"
+          },
+          "startTime": {
+            "S": "2027-03-29T08:00:00.000+0000"
+          },
+          "type": {
+            "S": "NSW Holiday"
+          }
+        }
+      }
+    }
+  ]
+}

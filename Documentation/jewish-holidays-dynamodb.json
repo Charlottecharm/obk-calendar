@@ -1,0 +1,1466 @@
+[
+  {
+    "pk": {
+      "S": "EVENT#JH-ROSH-HASHANAH-2025"
+    },
+    "sk": {
+      "S": "METADATA#2025-09-22"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/rosh-hashanah-2025"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2025-09-24"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2025-09-24T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2025-09-22T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-ROSH-HASHANAH-2025"
+        },
+        "Name": {
+          "S": "Rosh Hashanah - Kitchen Closed (Jewish New Year)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2025-09-24T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-ROSH-HASHANAH-2025"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Rosh Hashanah - Kitchen Closed (Jewish New Year)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2025-09-22T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-YOM-KIPPUR-2025"
+    },
+    "sk": {
+      "S": "METADATA#2025-10-01"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/yom-kippur-2025"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2025-10-02"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2025-10-02T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2025-10-01T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-YOM-KIPPUR-2025"
+        },
+        "Name": {
+          "S": "Yom Kippur - Kitchen Closed (Day of Atonement)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2025-10-02T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-YOM-KIPPUR-2025"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Yom Kippur - Kitchen Closed (Day of Atonement)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2025-10-01T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SUKKOT-2025"
+    },
+    "sk": {
+      "S": "METADATA#2025-10-06"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/sukkot-2025"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2025-10-13"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2025-10-13T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2025-10-06T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SUKKOT-2025"
+        },
+        "Name": {
+          "S": "Sukkot - Kitchen Closed (Feast of Tabernacles)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2025-10-13T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SUKKOT-2025"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Sukkot - Kitchen Closed (Feast of Tabernacles)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2025-10-06T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SHEMINI-ATZERET-2025"
+    },
+    "sk": {
+      "S": "METADATA#2025-10-13"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/shemini-atzeret-2025"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2025-10-14"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2025-10-14T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2025-10-13T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SHEMINI-ATZERET-2025"
+        },
+        "Name": {
+          "S": "Shemini Atzeret - Kitchen Closed (Eighth Day of Assembly)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2025-10-14T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SHEMINI-ATZERET-2025"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Shemini Atzeret - Kitchen Closed (Eighth Day of Assembly)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2025-10-13T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SIMCHAT-TORAH-2025"
+    },
+    "sk": {
+      "S": "METADATA#2025-10-14"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/simchat-torah-2025"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2025-10-15"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2025-10-15T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2025-10-14T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SIMCHAT-TORAH-2025"
+        },
+        "Name": {
+          "S": "Simchat Torah - Kitchen Closed (Celebration of the Torah)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2025-10-15T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SIMCHAT-TORAH-2025"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Simchat Torah - Kitchen Closed (Celebration of the Torah)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2025-10-14T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-HANUKKAH-2025"
+    },
+    "sk": {
+      "S": "METADATA#2025-12-14"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/hanukkah-2025"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2025-12-22"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2025-12-22T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2025-12-14T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-HANUKKAH-2025"
+        },
+        "Name": {
+          "S": "Hanukkah - Kitchen Closed (Festival of Lights)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2025-12-22T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-HANUKKAH-2025"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Hanukkah - Kitchen Closed (Festival of Lights)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2025-12-14T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-PURIM-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-03-23"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/purim-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-03-24"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-03-24T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-03-23T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-PURIM-2026"
+        },
+        "Name": {
+          "S": "Purim - Kitchen Closed (Celebration of Jewish Deliverance)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-03-24T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-PURIM-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Purim - Kitchen Closed (Celebration of Jewish Deliverance)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-03-23T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-PASSOVER-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-04-22"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/passover-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-04-30"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-04-30T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-04-22T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-PASSOVER-2026"
+        },
+        "Name": {
+          "S": "Passover - Kitchen Closed (Feast of Unleavened Bread)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-04-30T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-PASSOVER-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Passover - Kitchen Closed (Feast of Unleavened Bread)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-04-22T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SHAVUOT-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-06-10"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/shavuot-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-06-12"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-06-12T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-06-10T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SHAVUOT-2026"
+        },
+        "Name": {
+          "S": "Shavuot - Kitchen Closed (Feast of Weeks)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-06-12T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SHAVUOT-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Shavuot - Kitchen Closed (Feast of Weeks)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-06-10T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-ROSH-HASHANAH-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-09-11"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/rosh-hashanah-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-09-13"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-09-13T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-09-11T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-ROSH-HASHANAH-2026"
+        },
+        "Name": {
+          "S": "Rosh Hashanah - Kitchen Closed (Jewish New Year)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-09-13T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-ROSH-HASHANAH-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Rosh Hashanah - Kitchen Closed (Jewish New Year)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-09-11T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-YOM-KIPPUR-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-09-20"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/yom-kippur-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-09-21"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-09-21T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-09-20T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-YOM-KIPPUR-2026"
+        },
+        "Name": {
+          "S": "Yom Kippur - Kitchen Closed (Day of Atonement)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-09-21T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-YOM-KIPPUR-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Yom Kippur - Kitchen Closed (Day of Atonement)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-09-20T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SUKKOT-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-09-25"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/sukkot-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-10-02"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-10-02T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-09-25T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SUKKOT-2026"
+        },
+        "Name": {
+          "S": "Sukkot - Kitchen Closed (Feast of Tabernacles)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-10-02T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SUKKOT-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Sukkot - Kitchen Closed (Feast of Tabernacles)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-09-25T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SHEMINI-ATZERET-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-10-02"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/shemini-atzeret-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-10-03"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-10-03T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-10-02T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SHEMINI-ATZERET-2026"
+        },
+        "Name": {
+          "S": "Shemini Atzeret - Kitchen Closed (Eighth Day of Assembly)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-10-03T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SHEMINI-ATZERET-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Shemini Atzeret - Kitchen Closed (Eighth Day of Assembly)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-10-02T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SIMCHAT-TORAH-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-10-03"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/simchat-torah-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-10-04"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-10-04T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-10-03T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SIMCHAT-TORAH-2026"
+        },
+        "Name": {
+          "S": "Simchat Torah - Kitchen Closed (Celebration of the Torah)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-10-04T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SIMCHAT-TORAH-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Simchat Torah - Kitchen Closed (Celebration of the Torah)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-10-03T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-HANUKKAH-2026"
+    },
+    "sk": {
+      "S": "METADATA#2026-12-04"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/hanukkah-2026"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2026-12-12"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2026-12-12T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2026-12-04T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-HANUKKAH-2026"
+        },
+        "Name": {
+          "S": "Hanukkah - Kitchen Closed (Festival of Lights)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2026-12-12T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-HANUKKAH-2026"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Hanukkah - Kitchen Closed (Festival of Lights)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2026-12-04T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-PURIM-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-03-13"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/purim-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-03-14"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-03-14T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-03-13T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-PURIM-2027"
+        },
+        "Name": {
+          "S": "Purim - Kitchen Closed (Celebration of Jewish Deliverance)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-03-14T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-PURIM-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Purim - Kitchen Closed (Celebration of Jewish Deliverance)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-03-13T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-PASSOVER-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-04-12"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/passover-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-04-20"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-04-20T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-04-12T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-PASSOVER-2027"
+        },
+        "Name": {
+          "S": "Passover - Kitchen Closed (Feast of Unleavened Bread)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-04-20T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-PASSOVER-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Passover - Kitchen Closed (Feast of Unleavened Bread)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-04-12T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SHAVUOT-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-06-01"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/shavuot-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-06-03"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-06-03T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-06-01T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SHAVUOT-2027"
+        },
+        "Name": {
+          "S": "Shavuot - Kitchen Closed (Feast of Weeks)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-06-03T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SHAVUOT-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Shavuot - Kitchen Closed (Feast of Weeks)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-06-01T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-ROSH-HASHANAH-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-09-30"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/rosh-hashanah-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-10-02"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-10-02T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-09-30T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-ROSH-HASHANAH-2027"
+        },
+        "Name": {
+          "S": "Rosh Hashanah - Kitchen Closed (Jewish New Year)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-10-02T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-ROSH-HASHANAH-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Rosh Hashanah - Kitchen Closed (Jewish New Year)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-09-30T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-YOM-KIPPUR-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-10-09"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/yom-kippur-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-10-10"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-10-10T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-10-09T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-YOM-KIPPUR-2027"
+        },
+        "Name": {
+          "S": "Yom Kippur - Kitchen Closed (Day of Atonement)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-10-10T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-YOM-KIPPUR-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Yom Kippur - Kitchen Closed (Day of Atonement)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-10-09T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SUKKOT-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-10-14"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/sukkot-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-10-21"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-10-21T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-10-14T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SUKKOT-2027"
+        },
+        "Name": {
+          "S": "Sukkot - Kitchen Closed (Feast of Tabernacles)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-10-21T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SUKKOT-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Sukkot - Kitchen Closed (Feast of Tabernacles)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-10-14T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SHEMINI-ATZERET-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-10-21"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/shemini-atzeret-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-10-22"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-10-22T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-10-21T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SHEMINI-ATZERET-2027"
+        },
+        "Name": {
+          "S": "Shemini Atzeret - Kitchen Closed (Eighth Day of Assembly)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-10-22T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SHEMINI-ATZERET-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Shemini Atzeret - Kitchen Closed (Eighth Day of Assembly)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-10-21T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-SIMCHAT-TORAH-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-10-22"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/simchat-torah-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2027-10-23"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2027-10-23T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-10-22T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-SIMCHAT-TORAH-2027"
+        },
+        "Name": {
+          "S": "Simchat Torah - Kitchen Closed (Celebration of the Torah)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2027-10-23T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-SIMCHAT-TORAH-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Simchat Torah - Kitchen Closed (Celebration of the Torah)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-10-22T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  },
+  {
+    "pk": {
+      "S": "EVENT#JH-HANUKKAH-2027"
+    },
+    "sk": {
+      "S": "METADATA#2027-12-24"
+    },
+    "data": {
+      "M": {
+        "attributes": {
+          "M": {
+            "type": {
+              "S": "Jewish Holiday"
+            },
+            "url": {
+              "S": "/jewish-holidays/hanukkah-2027"
+            }
+          }
+        },
+        "CloseDate": {
+          "S": "2028-01-01"
+        },
+        "Event_End_Date_Time__c": {
+          "S": "2028-01-01T08:00:00.000+0000"
+        },
+        "Event_Start_Date_Time__c": {
+          "S": "2027-12-24T08:00:00.000+0000"
+        },
+        "Id": {
+          "S": "JH-HANUKKAH-2027"
+        },
+        "Name": {
+          "S": "Hanukkah - Kitchen Closed (Festival of Lights)"
+        },
+        "Type": {
+          "S": "Jewish Holiday"
+        }
+      }
+    },
+    "endTime": {
+      "S": "2028-01-01T08:00:00.000+0000"
+    },
+    "eventId": {
+      "S": "JH-HANUKKAH-2027"
+    },
+    "lastSynced": {
+      "S": "2025-08-22T12:00:00.000Z"
+    },
+    "name": {
+      "S": "Hanukkah - Kitchen Closed (Festival of Lights)"
+    },
+    "source": {
+      "S": "JEWISH_HOLIDAYS"
+    },
+    "startTime": {
+      "S": "2027-12-24T08:00:00.000+0000"
+    },
+    "type": {
+      "S": "Jewish Holiday"
+    }
+  }
+]
