@@ -36,9 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
           syncButton: {
             text: 'Refresh',
             click: function() {
+              var btn = document.querySelector('.fc-syncButton-button');
+              btn.textContent = 'Syncing...';
+              btn.disabled = true;
               fetch('/api/sync', { method: 'POST' })
                 .then(() => location.reload())
-                .catch(err => console.error('Sync failed:', err));
+                .catch(function(err) {
+                  console.error('Sync failed:', err);
+                  btn.textContent = 'Refresh';
+                  btn.disabled = false;
+                });
             }
           }
         },

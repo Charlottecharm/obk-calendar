@@ -1,3 +1,8 @@
+/* Global font */
+* {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
 /* Sidenav */
 .spm {
     width: 18vw;
