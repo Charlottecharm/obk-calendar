@@ -38,6 +38,7 @@ Browser (FullCalendar)
 3. Data is written to DynamoDB with `pk = EVENT#<id>` or `TIMESLOT#<id>`
 4. Jewish holidays and NSW public holidays are stored separately in DynamoDB (static data, 2025–2027)
 5. The Vercel frontend fetches from `/api/opportunities` which proxies to API Gateway → Lambda → DynamoDB
+6. Users can force an immediate sync at any time using the **Refresh** button in the calendar toolbar
 
 ---
 
@@ -84,11 +85,20 @@ Browser (FullCalendar)
 
 ---
 
+## UI
+
+- **Font:** Arial, Helvetica, sans-serif (matches OBK website)
+- **Views:** Week and Day (default: Day)
+- **Day title format:** `Mon - 29/6`
+- **Refresh button:** Forces an immediate Salesforce sync without waiting for the 4-hour schedule. Shows "Syncing..." while in progress (~5 seconds), then reloads the calendar with fresh data.
+
+---
+
 ## Ongoing maintenance
 
 | Task | How |
 |------|-----|
-| Force a re-sync now | Lambda → Test tab → run the `ManualSync` test event (`{ "httpMethod": "POST" }`) |
+| Force a re-sync now | Click the **Refresh** button on the calendar, or Lambda → Test tab → run the `ManualSync` test event (`{ "httpMethod": "POST" }`) |
 | View sync logs | CloudWatch → Log groups → `/aws/lambda/prod-calendar-sync` |
 | Update Jewish holidays | See `Documentation/UPDATE_JEWISH_HOLIDAYS.md` |
 | Update Lambda code | Re-zip `lambda/` contents → Lambda → Upload from .zip |
