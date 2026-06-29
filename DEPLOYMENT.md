@@ -219,12 +219,12 @@ Then zip the entire `lambda` folder contents (not the folder itself — select `
 1. Go to **AWS Console → EventBridge → Rules → Create rule**
 2. **Name:** `prod-daily-calendar-sync`
 3. **Rule type:** Schedule
-4. **Schedule pattern:** Rate-based → `1` day
+4. **Schedule pattern:** Rate-based → `4` hours
 5. Click **Next**
 6. **Target:** AWS service → Lambda function → `prod-calendar-sync`
 7. Click through and **Create rule**
 
-This triggers a Salesforce sync every 24 hours automatically.
+This triggers a Salesforce sync every 4 hours automatically.
 
 ---
 
