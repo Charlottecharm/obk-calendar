@@ -32,10 +32,31 @@ document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');
       var calendar = new FullCalendar.Calendar(calendarEl, {
         timeZone: 'Australia/Sydney',
+        customButtons: {
+          syncButton: {
+            text: 'Refresh',
+            click: function() {
+              fetch('/api/sync', { method: 'POST' })
+                .then(() => location.reload())
+                .catch(err => console.error('Sync failed:', err));
+            }
+          }
+        },
         headerToolbar: {
-          left: 'prev,next today',
+          left: 'prev,next today syncButton',
           center: 'title',
           right: 'dayGridWeek,timeGridDay'
+        },
+        views: {
+          timeGridDay: {
+            titleFormat: function(info) {
+              var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+              var dayName = days[info.date.marker.getUTCDay()];
+              var dayNum = info.date.day;
+              var month = info.date.month + 1;
+              return dayName + ' - ' + dayNum + '/' + month;
+            }
+          }
         },
         navLinks: true,
         initialView: 'timeGridDay',

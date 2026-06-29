@@ -121,6 +121,17 @@
     text-transform: capitalize !important;
 }
 
+.fc-syncButton-button {
+    background-color: #0052CC !important;
+    border-color: #0052CC !important;
+    margin-left: 8px !important;
+}
+
+.fc-syncButton-button:hover {
+    background-color: #0747A6 !important;
+    border-color: #0747A6 !important;
+}
+
 /* Event Type Styles */
 .event-type-Corporate-Event,
 .event-type-School-Program,
